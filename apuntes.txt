@@ -1,0 +1,16 @@
+****** Index of ******
+
+Este metodo se utiliza en arrays y recibe dos parametros de las cuales el segundo es opcional, 
+sirve para buscar un elemento dento del arreglo y te devuelve la posicion en la que se encuentra el elemento.
+Si en caso no encuentra el valor, entonces te devuelve : -1
+
+Ejemplo : 
+
+let arreglo = ['enero',9,'marzo',2 ,'mayo']
+console.log(arreglo.indexOf(2)) // El resultado es 3
+
+let arreglo = ['enero',9,'marzo',2,'mayo',2,8,'octubre']
+console.log(arreglo.indexOf(2,4)) // El resultado es 5
+
+let arreglo = ['enero',9,'marzo',2,'mayo',2,8,'octubre','noviembre']
+console.log(arreglo.indexOf('mayo')) // El resultado es 4
