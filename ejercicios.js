@@ -42,3 +42,25 @@ invertirCadena('Hola mundo')
 imprimirAsteriscos()
 
 
+// Ejercicio : Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+// Logré hacer el ejercicio, pero solo cuando los caracteres a eliminar empiezan desde la posicion 0 :(
+
+const eliminarCaracteres = (cadena, caracEliminados) =>{
+  if(!cadena) return console.log('No ingresó ninguna cadena')
+  if(!caracEliminados) return console.log('No ingresó caracteres a eliminar')
+  let arr = cadena.split(',');
+
+  let arregloFinal = []
+
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i].substring(0,caracEliminados.length) === caracEliminados){
+      let valor = arr[i].substring(caracEliminados.length,arr[0].length)
+      arregloFinal.push(valor)
+    }else{
+      return console.log('Los caracteres a eliminar no se encuentran en la cadena')
+    }
+  }
+  return console.log(arregloFinal.join())
+}
+
+eliminarCaracteres('xyz1,xyz2,xyz3,xyz4,xyz5','xyz')
