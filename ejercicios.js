@@ -64,3 +64,22 @@ const eliminarCaracteres = (cadena, caracEliminados) =>{
 }
 
 eliminarCaracteres('xyz1,xyz2,xyz3,xyz4,xyz5','xyz')
+
+
+// Ejercicio : Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+const eliminarCaracteres = (cadena,caracteres) =>{
+  if(!cadena) return console.log('No ingresó ninguna cadena')
+  if(!caracteres) return console.log('No ingresó caracteres a eliminar')
+
+  let patron = caracteres
+  // La g significa que buscará todas las concidencias, si no hubiera g solo buscaria la primera
+  let expReg = new RegExp(patron,'g')
+
+  if(expReg.test(cadena)){
+    return console.log(cadena.replace(expReg,''))
+  }
+}
+
+eliminarCaracteres('xyz1,xyz2,xyz3,xyz4,xyz5','xyz')
+eliminarCaracteres('peru ganó con goles de cuevita, lapadula y carrillo','o')
